@@ -1,11 +1,8 @@
 /** CDN base URL for all static assets */
-export const CDN_BASE = "https://res-cdn.tunee.ai/web_static_res/op";
+export const CDN_BASE = "https://tunee-ja-scene-pages.vercel.app";
 
 /** Audio file paths - will be served from CDN in production, /audio/ in dev */
-export const AUDIO_BASE =
-  process.env.NODE_ENV === "production"
-    ? `${CDN_BASE}/ja-scene-bgm`
-    : "/audio";
+export const AUDIO_BASE = `${CDN_BASE}/audio`;
 
 /** Main site URL */
 export const SITE_URL = "https://www.tunee.ai";
