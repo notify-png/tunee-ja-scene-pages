@@ -24,10 +24,24 @@
 Audio files are in `public/audio/` for local development.
 In production, they should be served from CDN:
 ```
-https://res-cdn.tunee.ai/web_static_res/agent/audio/{filename}.mp3
+https://res-cdn.tunee.ai/web_static_res/op/ja-scene-bgm/{filename}.mp3
 ```
 
 Update `lib/constants.ts` → `AUDIO_BASE` for CDN configuration.
+
+### File Naming Convention
+```
+ja-scene-{page}-{year}-{description}.mp3
+
+Examples:
+ja-scene-ytbgm-2026-morning-vlog.mp3
+ja-scene-gamebgm-2026-boss-battle.mp3
+ja-scene-healbgm-2026-rain-piano.mp3
+```
+
+### CDN Upload Path
+Upload to OSS console: `web_static_res/op/ja-scene-bgm/`
+Full URL: `https://res-cdn.tunee.ai/web_static_res/op/ja-scene-bgm/{filename}.mp3`
 
 ## Development
 

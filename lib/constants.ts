@@ -1,10 +1,10 @@
 /** CDN base URL for all static assets */
-export const CDN_BASE = "https://res-cdn.tunee.ai/web_static_res/agent";
+export const CDN_BASE = "https://res-cdn.tunee.ai/web_static_res/op";
 
 /** Audio file paths - will be served from CDN in production, /audio/ in dev */
 export const AUDIO_BASE =
   process.env.NODE_ENV === "production"
-    ? `${CDN_BASE}/audio`
+    ? `${CDN_BASE}/ja-scene-bgm`
     : "/audio";
 
 /** Main site URL */
@@ -103,28 +103,28 @@ export interface AudioTrack {
 
 export const SCENE_TRACKS: Record<SceneKey, AudioTrack[]> = {
   "video-bgm": [
-    { id: "yt-1", name: "朝の散歩Vlog", genre: "ポップ / アコースティック", duration: "2:00", prompt: "朝の散歩Vlog用。明るくて爽やか。ウクレレとピアノ。2分。テンポは歩く速さ。", file: "bgm-morning-vlog.mp3", color: "#fcb69f" },
-    { id: "yt-2", name: "料理動画BGM", genre: "Lo-fi / ジャズ", duration: "1:30", prompt: "料理チャンネル用。カフェっぽいジャズ。落ち着いた雰囲気。包丁の音に合うテンポ。", file: "bgm-cooking.mp3", color: "#a18cd1" },
-    { id: "yt-3", name: "ゲーム実況OP", genre: "エレクトロ / ポップ", duration: "0:15", prompt: "ゲーム実況のオープニングジングル。テンション高め。15秒で印象に残る感じ。", file: "bgm-game-op.mp3", color: "#764ba2" },
-    { id: "yt-4", name: "解説・教育動画", genre: "アンビエント / ミニマル", duration: "3:00", prompt: "教育系解説動画の背景音楽。ナレーションの邪魔にならない。静かで知的。", file: "bgm-education.mp3", color: "#c3cfe2" },
+    { id: "yt-1", name: "朝の散歩Vlog", genre: "ポップ / アコースティック", duration: "2:00", prompt: "朝の散歩Vlog用。明るくて爽やか。ウクレレとピアノ。2分。テンポは歩く速さ。", file: "ja-scene-ytbgm-2026-morning-vlog.mp3", color: "#fcb69f" },
+    { id: "yt-2", name: "料理動画BGM", genre: "Lo-fi / ジャズ", duration: "1:30", prompt: "料理チャンネル用。カフェっぽいジャズ。落ち着いた雰囲気。包丁の音に合うテンポ。", file: "ja-scene-ytbgm-2026-cooking-jazz.mp3", color: "#a18cd1" },
+    { id: "yt-3", name: "ゲーム実況OP", genre: "エレクトロ / ポップ", duration: "0:15", prompt: "ゲーム実況のオープニングジングル。テンション高め。15秒で印象に残る感じ。", file: "ja-scene-ytbgm-2026-game-opening.mp3", color: "#764ba2" },
+    { id: "yt-4", name: "解説・教育動画", genre: "アンビエント / ミニマル", duration: "3:00", prompt: "教育系解説動画の背景音楽。ナレーションの邪魔にならない。静かで知的。", file: "ja-scene-ytbgm-2026-education-ambient.mp3", color: "#c3cfe2" },
   ],
   "lofi-bgm": [
-    { id: "wk-1", name: "雨のカフェ", genre: "Lo-fi ジャズ", duration: "3:00", prompt: "雨の日のカフェにいるような。Lo-fiジャズ。ビニールノイズ少し。窓に雨粒の音。", file: "bgm-work-cafe.mp3", color: "#8b6040" },
-    { id: "wk-2", name: "深夜の集中", genre: "チルアンビエント", duration: "5:00", prompt: "深夜に一人でコーディング。静かなアンビエント。ビートなし。思考の邪魔をしない。", file: "bgm-work-coding.mp3", color: "#2c1e10" },
-    { id: "wk-3", name: "図書館の午後", genre: "ピアノソロ", duration: "4:00", prompt: "勉強に集中できるBGM。ピアノソロ。静かで邪魔にならない。大学の図書館にいる感じ。", file: "bgm-work-piano.mp3", color: "#6a5a4a" },
-    { id: "wk-4", name: "Lofi Hip Hop", genre: "Lo-fi ヒップホップ", duration: "3:00", prompt: "Lo-fi hip hop。チルなビート。サックスのサンプル入り。夜の作業に。", file: "bgm-work-lofi.mp3", color: "#a08050" },
+    { id: "wk-1", name: "雨のカフェ", genre: "Lo-fi ジャズ", duration: "3:00", prompt: "雨の日のカフェにいるような。Lo-fiジャズ。ビニールノイズ少し。窓に雨粒の音。", file: "ja-scene-workbgm-2026-rainy-cafe.mp3", color: "#8b6040" },
+    { id: "wk-2", name: "深夜の集中", genre: "チルアンビエント", duration: "5:00", prompt: "深夜に一人でコーディング。静かなアンビエント。ビートなし。思考の邪魔をしない。", file: "ja-scene-workbgm-2026-night-coding.mp3", color: "#2c1e10" },
+    { id: "wk-3", name: "図書館の午後", genre: "ピアノソロ", duration: "4:00", prompt: "勉強に集中できるBGM。ピアノソロ。静かで邪魔にならない。大学の図書館にいる感じ。", file: "ja-scene-workbgm-2026-library-piano.mp3", color: "#6a5a4a" },
+    { id: "wk-4", name: "Lofi Hip Hop", genre: "Lo-fi ヒップホップ", duration: "3:00", prompt: "Lo-fi hip hop。チルなビート。サックスのサンプル入り。夜の作業に。", file: "ja-scene-workbgm-2026-lofi-hiphop.mp3", color: "#a08050" },
   ],
   "game-bgm": [
-    { id: "gm-1", name: "ボス戦", genre: "orchestral / epic", duration: "2:00", prompt: "RPGのボス戦BGM。緊迫感のあるオーケストラ。ティンパニとストリングス。ループ対応。", file: "bgm-game-boss.mp3", color: "#ff0080" },
-    { id: "gm-2", name: "城下町", genre: "fantasy / folk", duration: "1:30", prompt: "中世ファンタジーの城下町。穏やかで温かい。リュートとフルート。ループ対応。", file: "bgm-game-town.mp3", color: "#f59e0b" },
-    { id: "gm-3", name: "宇宙探索", genre: "synth / ambient", duration: "2:00", prompt: "SFゲームの宇宙空間を漂うシーン。広がりのあるシンセパッド。神秘的。", file: "bgm-game-space.mp3", color: "#7c3aed" },
-    { id: "gm-4", name: "タイトル画面", genre: "cinematic", duration: "0:30", prompt: "モバイルゲームのタイトル画面。ワクワク感。30秒ループ対応。", file: "bgm-game-title.mp3", color: "#00d4ff" },
+    { id: "gm-1", name: "ボス戦", genre: "orchestral / epic", duration: "2:00", prompt: "RPGのボス戦BGM。緊迫感のあるオーケストラ。ティンパニとストリングス。ループ対応。", file: "ja-scene-gamebgm-2026-boss-battle.mp3", color: "#ff0080" },
+    { id: "gm-2", name: "城下町", genre: "fantasy / folk", duration: "1:30", prompt: "中世ファンタジーの城下町。穏やかで温かい。リュートとフルート。ループ対応。", file: "ja-scene-gamebgm-2026-castle-town.mp3", color: "#f59e0b" },
+    { id: "gm-3", name: "宇宙探索", genre: "synth / ambient", duration: "2:00", prompt: "SFゲームの宇宙空間を漂うシーン。広がりのあるシンセパッド。神秘的。", file: "ja-scene-gamebgm-2026-space-explore.mp3", color: "#7c3aed" },
+    { id: "gm-4", name: "タイトル画面", genre: "cinematic", duration: "0:30", prompt: "モバイルゲームのタイトル画面。ワクワク感。30秒ループ対応。", file: "ja-scene-gamebgm-2026-title-screen.mp3", color: "#00d4ff" },
   ],
   "healing-bgm": [
-    { id: "hl-1", name: "雨夜の入眠", genre: "アンビエント + 雨音", duration: "5:00", prompt: "眠りにつくためのBGM。雨の音と柔らかいピアノ。テンポはとてもゆっくり。", file: "bgm-heal-rain.mp3", color: "#7a9a7a" },
-    { id: "hl-2", name: "海辺の瞑想", genre: "アンビエント + 波音", duration: "4:00", prompt: "海辺で瞑想しているイメージ。波の音とパッドシンセ。深い呼吸に合うテンポ。", file: "bgm-heal-ocean.mp3", color: "#6a8aaa" },
-    { id: "hl-3", name: "朝のヨガ", genre: "ニューエイジ", duration: "3:00", prompt: "朝ヨガ用BGM。シンギングボウルとアコースティックギター。穏やかで前向き。", file: "bgm-heal-yoga.mp3", color: "#b08a5a" },
-    { id: "hl-4", name: "スパサロン", genre: "チルアウト / スパ", duration: "3:00", prompt: "高級スパのBGM。エスニック感少し。フルートとシンセパッド。上品で穏やか。", file: "bgm-heal-spa.mp3", color: "#8a7aaa" },
+    { id: "hl-1", name: "雨夜の入眠", genre: "アンビエント + 雨音", duration: "5:00", prompt: "眠りにつくためのBGM。雨の音と柔らかいピアノ。テンポはとてもゆっくり。", file: "ja-scene-healbgm-2026-rain-piano.mp3", color: "#7a9a7a" },
+    { id: "hl-2", name: "海辺の瞑想", genre: "アンビエント + 波音", duration: "4:00", prompt: "海辺で瞑想しているイメージ。波の音とパッドシンセ。深い呼吸に合うテンポ。", file: "ja-scene-healbgm-2026-ocean-meditation.mp3", color: "#6a8aaa" },
+    { id: "hl-3", name: "朝のヨガ", genre: "ニューエイジ", duration: "3:00", prompt: "朝ヨガ用BGM。シンギングボウルとアコースティックギター。穏やかで前向き。", file: "ja-scene-healbgm-2026-morning-yoga.mp3", color: "#b08a5a" },
+    { id: "hl-4", name: "スパサロン", genre: "チルアウト / スパ", duration: "3:00", prompt: "高級スパのBGM。エスニック感少し。フルートとシンセパッド。上品で穏やか。", file: "ja-scene-healbgm-2026-spa-salon.mp3", color: "#8a7aaa" },
   ],
 };
 
